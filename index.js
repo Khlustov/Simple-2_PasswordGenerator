@@ -1,9 +1,15 @@
 const symbols = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
 const passwordLength = document.querySelector('.password-length')
 const generate = document.querySelector('.button__generate')
+const copy = document.querySelector('.button__copy-to-clipboard')
 const newPassword = document.querySelector('.password')
-generate.addEventListener('click', function() {
+
+
+generate.addEventListener('click', function() {    
+    
     let password = ''
+
     if(!/^[0-9]+$/.test(passwordLength.value)) {        
         alert('It shoul be a number')
         passwordLength.value = ''        
@@ -19,9 +25,14 @@ generate.addEventListener('click', function() {
     else {
         for(let i = 0; i < passwordLength.value; i++) {
             password += symbols[makeRandomPassword()]
-            newPassword.textContent = password
+            newPassword.value = password
         }
     }
+})
+
+copy.addEventListener('click', function() {
+    const cb = navigator.clipboard
+    cb.writeText(newPassword.value).then(() => alert('Password copied'))
 })
 
 function makeRandomPassword() {

@@ -98,9 +98,8 @@
     margin-bottom: 20px;
     width: 90%;
     height: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    background: none;
     border: 1px solid #FFF;
     color: #FF0000;
     font-size: 24px;
