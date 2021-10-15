@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="./index.js" defer></script>
     <title>Password generator</title>
@@ -16,11 +19,11 @@
         <div class="figure-4"></div>
         <div class="figure-5"></div>
         <div class="container">
-            <input class="password-length" type="text" required placeholder="Select a password length from 8 to 32 characters">
-            <span class="password"></span>
+            <input class="password-length" type="text" required placeholder="Select a password length from 8 to 32 characters" value="">
+            <div class="password"></div>
             <din class="buttons">
-                <button class="copy-to-clipboard">Copy To Clipboard</button>
-                <button class="generate">generate</button>
+                <button class="button button__copy-to-clipboard">Copy To Clipboard</button>
+                <button class="button button__generate">Generate</button>
             </din>
         </div>
     </div>   
